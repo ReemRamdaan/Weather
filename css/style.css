@@ -1,0 +1,289 @@
+* { 
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+:root
+{
+    --main-color:#37aec3;
+    --text-color:#bfc1c8;
+    --bg-dark:#262936;
+    --bg-darker:#1e202b;
+}
+
+/* Nav CSS */
+nav
+{
+    background-color: var(--bg-darker);
+}
+button span
+{
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+button span:hover
+{
+    border-color: var(--main-color);
+}
+input:focus-visible
+{
+   outline: none;
+}
+.togle-btn:focus {
+    box-shadow: transparent var(--bs-navbar-toggler-focus-width) !important;
+}
+.logo
+{
+    width: 64px;
+    height: 38px;
+}
+.site-title
+{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+.site-description
+{
+    font-size: 10px;
+    font-weight: 500;
+    color: rgb(153, 171, 171);
+}
+.nav-items-border
+{
+    font-size: 14px;
+    padding:0px 25px !important;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 30px;
+   margin: 8px;
+   border: 2px solid transparent;
+    border-radius: 25px;
+}
+.first-item
+{
+    border-color: var(--main-color);
+    color: var(--main-color) !important;
+}
+.nav-items-border:hover
+{
+    border-color: var(--main-color);
+    color: var(--main-color) !important;
+}
+
+/* Search Input CSS */
+.search-container
+{
+    border-radius: 30px;
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+    background-color: var(--bg-dark);
+}
+#search
+{
+    width: 90%;
+    padding: 12px 15px;
+    border-radius: 30px;
+}
+#submit
+{
+    padding: 10px 40px;
+    border-radius: 30px;
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+/* Home CSS */
+#homePage
+{
+    background-image: url(../images/background.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.layer
+{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.current-container
+{
+border-top-left-radius: 8px;
+border-bottom-left-radius: 8px;
+background-color: var(--bg-dark);
+}
+.date-details
+{
+    background-color: rgba(0,0,0,0.1);
+    color: var(--text-color);
+    font-size: 14px;
+}
+.temp-container h2
+{
+    font-size: 90px;
+    font-weight: 700;
+    color: white;
+}
+.temp-container
+{
+    width: 90%;
+}
+#cityName
+{
+    font-size: 18px;
+    color: var(--text-color);
+}
+#currentStatus
+{
+    color: var(--main-color); 
+}
+.details i
+{
+    font-size: 21px;
+    color: #afaeb4;
+}
+.details span
+{
+    font-size: 14px;
+    color: var(--text-color);
+}
+.nextStatus
+{
+    color: var(--main-color);
+}
+.second-container
+{
+    background-color: var(--bg-darker);
+}
+.next-temp-container h2
+{
+  font-size: 24px;
+  font-weight: 600;
+}
+small
+{
+  font-size: 16px;
+  color: var(--text-color);
+}
+.next-sup
+{
+    color: var(--text-color);
+    font-size: 12px;
+}
+.third-container
+{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: var(--bg-dark);
+}
+
+/* Footer CSS */
+footer {
+    background-color: var(--bg-dark);
+    padding: 10px 0;
+}
+.subscribe-btn
+{
+    padding: 10px 40px;
+    border-radius: 30px;
+    background-color: var(--main-color);
+    color: #fff;  
+}
+.footer-search
+{
+    background-color: var(--bg-darker);
+}
+.icon
+{
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-darker);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.icon i
+{
+    color: var(--main-color);
+}
+.icon:hover 
+{
+    background-color: var(--main-color);
+}
+.icon:hover i
+{
+    color : #fff ;
+}
+footer p
+{
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+/* Contact CSS */
+#contact
+{
+    background-color: var(--bg-darker);
+}
+.map-container
+{
+    height: 340px;
+    background-color: var(--bg-dark);
+}
+.map
+{
+    height: 220px;
+}
+#contact i
+{
+    color: var(--main-color);
+}
+#contact p
+{
+    color: var(--text-color);
+}
+#contact input,textarea
+{
+    background-color: transparent !important;
+    border: 2px solid var(--bg-dark);
+    padding: 15px;
+}
+#contact input:hover,textarea:hover
+{
+    border-color: var(--main-color);
+}
+#contact #inputContact
+{
+    background-color: var(--bg-dark) !important;
+}
+#contact span p
+{
+    font-size: 14px;
+}
+#find-btn
+{
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 8px 25px ;
+    font-size: 14px;
+}
+
+/* media screen */
+@media screen and (max-width:992px) {
+    .current-container
+{
+border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+border-bottom-left-radius: 0px;
+}
+.third-container
+{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+}

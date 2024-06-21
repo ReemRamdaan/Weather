@@ -1,0 +1,195 @@
+<html>
+
+<head>
+
+  <title>Weather</title>
+
+  <meta name="author" content="shimaa" />
+  <meta name="description" content="weather app" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="html,css,js,ajax,weather" />
+
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container p-5">
+      <div class=" d-flex align-items-center">
+        <a class="navbar-brand" href="#homePage"><img src="images/logo.png" alt="cloud" class="logo"></a>
+        <div class="d-flex flex-column">
+          <a class="text-white site-title " href="home">Weather</a>
+          <span class="site-description">tagline goes here</span>
+        </div>
+      </div>
+      <button class="navbar-toggler togle-btn" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="fa-solid fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav  ms-auto mb-2 mb-lg-0 d-flex justify-content-around align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active first-item nav-items-border" aria-current="page" href="#" id="homeBtn">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white nav-items-border" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white nav-items-border" href="#">Live Cameres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white nav-items-border" href="#">Photos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white nav-items-border" href="#" id="contactBtn">Contact</a>
+          </li>
+      </div>
+    </div>
+  </nav>
+
+  <section id="homePage">
+    <div class="layer overflow-auto">
+      <div class=" my-5">
+        <div class="search-container d-flex justify-content-between p-1">
+          <input type="text" placeholder="Find Your Location..." class="border border-0 bg-transparent text-white" id="search">
+          <button id="submit" class="border border-0">Find</button>
+        </div>
+      </div>
+      <div class="container p-5">
+        <div class="row shadow">
+          <div class="col-lg-4 p-0 current-container my-2">
+            <div class=" d-flex justify-content-between align-items-center p-2 date-details">
+              <p class="m-0" id="currentDay">Monday</p>
+              <p class="m-0" id="currentMonth">12 Feb</p>
+            </div>
+            <div class=" py-4 px-3">
+              <p id="cityName">Cairo</p>
+              <div class="d-flex align-items-center temp-container">
+                <h2 class="text-white" id="currentDegree">19</h2>
+                <h2><sup>o</sup>C</h2>
+                <img src="images/logo.png" class="ms-auto" width="80" id="currentIcon">
+              </div>
+              <p id="currentStatus" class="my-4">cloud</p>
+              <div class="details p-1">
+                <i class="fas fa-umbrella pr-1"></i>
+                <span id="humidty"></span><span class="me-4">%</span>
+
+                <i class="fas fa-wind pl-3 pr-1"></i>
+                <span id="wind"></span> <span class="me-4">km/h</span>
+
+                <i class="far fa-compass pl-3 pr-1"></i>
+                <span id="compass"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 p-0 second-container my-2">
+            <div class=" text-center p-2 date-details">
+              <p class="m-0 nextDay">Monday</p>
+            </div>
+            <div class=" py-4 px-3 text-center">
+              <img src="images/logo.png" width="48"  class="my-4 nextIcon">
+              <div class="d-flex text-white justify-content-center next-temp-container mt-3">
+                <h2 class="nextMax p-0 m-0" >25</h2>
+                <h2 class=" p-0 m-0"><sup>o</sup>C</h2>
+              </div>
+              <small class="nextMin">26</small><sup class="next-sup">o</sup>
+              <p class="mt-4 nextStatus">cloud</p>
+            </div>
+          </div>
+          <div class="col-lg-4 p-0 third-container my-2">
+            <div class=" text-center p-2 date-details">
+              <p class="m-0 nextDay">Monday</p>
+            </div>
+            <div class=" py-4 px-3 text-center">
+              <img src="images/logo.png" width="48" class="my-4 nextIcon">
+              <div class="d-flex text-white justify-content-center next-temp-container mt-3">
+                <h2 class="nextMax p-0 m-0">30</h2>
+                <h2 class=" p-0 m-0"><sup>o</sup>C</h2>
+              </div>
+              <small class="nextMin">26</small><sup class="next-sup">o</sup>
+              <p class="mt-4 nextStatus">cloud</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section  id="contact" class="p-5 pt-0 d-none">
+    <div class="container">
+      <input type="text" placeholder="Home -> Contact"
+        class="w-100 p-3  text-white shadow border border-0  rounded-pill" id="inputContact">
+      <div class="row mt-5 ">
+        <div class="col-lg-4 rounded-2 shadow map-container">
+          <div class="map rounded-2"></div>
+          <div class="ps-3 rounded-2">
+            <span class="w-100 d-flex align-items-center my-1 ">
+              <i class="fa-solid fa-location-dot fa-1x me-3"></i>
+              <p class="mb-0">Company Name INC. 2803 Avenue <br> Street, Los Angeles</p>
+            </span>
+            <span class="w-100 d-flex my-1 align-items-center">
+              <i class="fa-solid fa-phone fa-1x me-3"></i>
+              <p class="mb-0">+1 800 314 235</p>
+            </span>
+            <span class="w-100 d-flex my-1 align-items-center">
+              <i class="fa-solid fa-envelope fa-1x me-3"></i>
+              <p class="mb-0">contact@companyname.com</p>
+            </span>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-2 ">
+          <h2 class="fw-bold text-white">Contact us</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laudantium, laborum eaque voluptas ipsa
+            nihil rerum aperiam odio dignissimos, explicabo accusantium ratione voluptate, unde quo dolorum aspernatur
+            porro autem nulla.</p>
+          <div class="row">
+            <input type="text" placeholder="Your Name..." class=" col-md-5  rounded-pill   mb-3 ">
+            <input type="text" placeholder="Email Adress..."
+              class=" col-md-5 offset-md-1 rounded-pill   mb-3 ">
+            <input type="text" placeholder="Company Name..." class=" col-md-5  rounded-pill   mb-3 ">
+            <input type="text" placeholder="Website..."
+              class=" col-md-5 rounded-pill offset-md-1   mb-3 ">
+            <textarea placeholder="Message" rows="7" class="col-md-11 rounded-2  "></textarea>
+          </div>
+          <button class=" rounded-pill mt-3  end-0 mb-5  border border-0 " id="find-btn" type="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container px-5 py-4">
+      <div class="row w-100">
+        <div class="col-lg-6 rounded-pill d-flex justify-content-between p-1 mt-3 footer-search">
+          <input type="text" placeholder="Find Your Location..." class="border border-0 bg-transparent w-75 rounded-pill">
+          <button class="border border-0 subscribe-btn">Subscribe</button>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-center align-items-center mt-2">
+          <div class="icon mx-1">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <div class="icon mx-1">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <div class="icon mx-1">
+            <i class="fab fa-pinterest"></i>
+          </div>
+          <div class="icon mx-1">
+            <i class="fab fa-google-plus"></i>
+          </div>
+        </div>
+      </div>
+      <p class=" mt-4">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
